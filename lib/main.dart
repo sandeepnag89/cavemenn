@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screens/Splash/Splash.dart';
+import 'AppRoutes/AppRoutes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.dark,
       ),
-      home: const SplashScreen(),
+
+      // ✅ USE THIS
+      initialRoute: AppRoutes.splash,
+
+      // ✅ KEEP THIS
+      routes: AppRoutes.routes,
     );
   }
 }

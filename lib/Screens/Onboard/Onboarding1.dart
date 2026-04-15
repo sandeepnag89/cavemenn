@@ -1,3 +1,4 @@
+import 'package:cavemen/AppRoutes/AppRoutes.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -50,7 +51,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             top: 50,
             right: 20,
             child: TextButton(
-              onPressed: () => Navigator.pushReplacementNamed(context, '/login'),
+              onPressed: () => Navigator.pushReplacementNamed(context, AppRoutes.login),
               child: Text("SKIP", style: TextStyle(color: Color(0xFFFF725E), fontWeight: FontWeight.bold)),
             ),
           ),
@@ -76,7 +77,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: ElevatedButton(
                     onPressed: () {
                       if (_currentIndex == _contents.length - 1) {
-                        Navigator.pushReplacementNamed(context, '/login');
+                        Navigator.pushReplacementNamed(context, AppRoutes.login);
                       } else {
                         _controller.nextPage(
                           duration: Duration(milliseconds: 300),
