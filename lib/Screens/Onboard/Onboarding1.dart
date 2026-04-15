@@ -4,8 +4,7 @@ class OnboardingScreen extends StatefulWidget {
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
-
-class _CurrentPageState extends State<OnboardingScreen> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _controller = PageController();
   int _currentIndex = 0;
 

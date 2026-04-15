@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:cavemen/Screens/Onboard/Onboarding1.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,11 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(const Duration(seconds: 5), () {
-      // Navigator.pushReplacement(
-      //   context,
-      //   MaterialPageRoute(builder: (_) => const HomePage()),
-      // );
-    });
+      Navigator.pushReplacementNamed(context, '/onboarding');
+     });
   }
 
   @override
